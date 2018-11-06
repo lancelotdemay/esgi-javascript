@@ -1,14 +1,3 @@
-var prairie = { 
-    animal : {
-        type: {
-            name: "chien"
-        }
-    }  
-};
-
-var path = "animal.gender.name"
-console.log(prop_access(prairie, path))
-
 function ucfirst(s) {
     if (s !== null && typeof s === "string"){
         var upperString = s.replace(s[0], s[0].toUpperCase()) 
