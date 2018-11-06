@@ -32,7 +32,7 @@ function camelCase(s) {
 
 function snake_case(s) {
     if (s !== null && typeof s === "string"){
-        var stringArray = s.split(' ')
+        var stringArray = s.split('/[\s_]+/')
         for(i in stringArray) {
           stringArray[i] = stringArray[i].toLowerCase()
         }
@@ -48,22 +48,40 @@ function leet(s) {
         returnedString = ""
         for (letter in s) {
             switch (s[letter]) {
-                case "a", "A":
+                case "a":
                     returnedString += "4"
                     break;
-                case "e", "E":
+                case "A":
+                    returnedString += "4"
+                    break;
+                case "e":
                     returnedString += "3"
                     break;
-                case "i", "I":
+                case "E":
+                    returnedString += "3"
+                    break;
+                case "i":
                     returnedString += "1"
                     break;
-                case "o", "O":
+                case "I":
+                    returnedString += "1"
+                    break;
+                case "o":
                     returnedString += "0"
                     break;
-                case "U", "u":
+                case "O":
+                    returnedString += "0"
+                    break;
+                case "u":
                     returnedString += "(_)"
                     break;
-                case "y", "Y":
+                case "U":
+                    returnedString += "(_)"
+                    break;
+                case "y":
+                    returnedString +=  "7"
+                    break;
+                case "Y":
                     returnedString +=  "7"
                     break;
                 default:
