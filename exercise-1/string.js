@@ -99,7 +99,7 @@ function prop_access(object, path) {
         if (path === "" || path === null) {
             
         } else {
-
+            var paths = path.split(".")
         }
         current = object
         for (i in paths) {
