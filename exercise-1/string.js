@@ -96,7 +96,11 @@ function leet(s) {
 
 function prop_access(object, path) {
     if (object !== null && typeof path === "string"){
-        paths = path.split('.')
+        if (path === "" || path === null) {
+            
+        } else {
+
+        }
         current = object
         for (i in paths) {
             if (current[paths[i]] !== undefined) {
@@ -106,7 +110,7 @@ function prop_access(object, path) {
             }
         }
         return current
-    } else if (path === "" || path === null){
-        return prairie
+    } else {
+        return ""
     }
 }
